@@ -62,7 +62,7 @@ const ItemModel = ({address, index}) => {
         <Modal
             closeIcon
             open={open}
-            trigger={<Button>Order Deta</Button>}
+            trigger={<Button>Order Details</Button>}
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             size='tiny'
