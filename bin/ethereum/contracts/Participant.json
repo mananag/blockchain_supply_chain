@@ -1,0 +1,473 @@
+{
+    "contractName": "Participant",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "participants",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "username",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "userId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "enum Participant.user_type",
+                    "name": "utype",
+                    "type": "uint8"
+                },
+                {
+                    "internalType": "string",
+                    "name": "location",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address",
+                    "name": "user_address",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"participants\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"username\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"userId\",\"type\":\"uint256\"},{\"internalType\":\"enum Participant.user_type\",\"name\":\"utype\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"location\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"user_address\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Implements project crowdfunding platform\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Campaign\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"e:/Blockchain/blockchain_supply_chain/ethereum/contracts/member.sol\":\"Participant\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"e:/Blockchain/blockchain_supply_chain/ethereum/contracts/member.sol\":{\"keccak256\":\"0x5a0f47329dfa7554bf5632a70d93240f3f8fb8c660c08050c7f5611abdc55a4d\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://75d6e6cbb4521b0ca806d2cfabe3202617491df468e5e73dc6b8e735b92cf410\",\"dweb:/ipfs/QmY7Vczh1CYjw5v4t4TYK6NCD1izQ3KEC3TKTK9xEpYAYs\"]}},\"version\":1}",
+    "bytecode": "60806040526000805534801561001457600080fd5b506102e5806100246000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806335c1d34914610030575b600080fd5b61004361003e3660046101ac565b61005d565b60405161005495949392919061020b565b60405180910390f35b60016020526000908152604090208054819061007890610275565b80601f01602080910402602001604051908101604052809291908181526020018280546100a490610275565b80156100f15780601f106100c6576101008083540402835291602001916100f1565b820191906000526020600020905b8154815290600101906020018083116100d457829003601f168201915b50505050600183015460028401546003850180549495929460ff90921693509061011a90610275565b80601f016020809104026020016040519081016040528092919081815260200182805461014690610275565b80156101935780601f1061016857610100808354040283529160200191610193565b820191906000526020600020905b81548152906001019060200180831161017657829003601f168201915b505050600490930154919250506001600160a01b031685565b6000602082840312156101be57600080fd5b5035919050565b6000815180845260005b818110156101eb576020818501810151868301820152016101cf565b506000602082860101526020601f19601f83011685010191505092915050565b60a08152600061021e60a08301886101c5565b8660208401526004861061024257634e487b7160e01b600052602160045260246000fd5b856040840152828103606084015261025a81866101c5565b91505060018060a01b03831660808301529695505050505050565b600181811c9082168061028957607f821691505b6020821081036102a957634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220f44af061bf554cc28ad88bb8b18b02116f15b5c0bcbf8fb2d5d9c3179da8d17564736f6c63430008110033",
+    "deployedBytecode": "608060405234801561001057600080fd5b506004361061002b5760003560e01c806335c1d34914610030575b600080fd5b61004361003e3660046101ac565b61005d565b60405161005495949392919061020b565b60405180910390f35b60016020526000908152604090208054819061007890610275565b80601f01602080910402602001604051908101604052809291908181526020018280546100a490610275565b80156100f15780601f106100c6576101008083540402835291602001916100f1565b820191906000526020600020905b8154815290600101906020018083116100d457829003601f168201915b50505050600183015460028401546003850180549495929460ff90921693509061011a90610275565b80601f016020809104026020016040519081016040528092919081815260200182805461014690610275565b80156101935780601f1061016857610100808354040283529160200191610193565b820191906000526020600020905b81548152906001019060200180831161017657829003601f168201915b505050600490930154919250506001600160a01b031685565b6000602082840312156101be57600080fd5b5035919050565b6000815180845260005b818110156101eb576020818501810151868301820152016101cf565b506000602082860101526020601f19601f83011685010191505092915050565b60a08152600061021e60a08301886101c5565b8660208401526004861061024257634e487b7160e01b600052602160045260246000fd5b856040840152828103606084015261025a81866101c5565b91505060018060a01b03831660808301529695505050505050565b600181811c9082168061028957607f821691505b6020821081036102a957634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220f44af061bf554cc28ad88bb8b18b02116f15b5c0bcbf8fb2d5d9c3179da8d17564736f6c63430008110033",
+    "sourceMap": "154:416:2:-:0;;;189:1;181:9;;154:416;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "154:416:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;469:46;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;469:46:2;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;469:46:2;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;469:46:2;;;;;;;-1:-1:-1;;;;;;;469:46:2;;:::o;14:180:6:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:6;;14:180;-1:-1:-1;14:180:6:o;199:423::-;241:3;279:5;273:12;306:6;301:3;294:19;331:1;341:162;355:6;352:1;349:13;341:162;;;417:4;473:13;;;469:22;;463:29;445:11;;;441:20;;434:59;370:12;341:162;;;345:3;548:1;541:4;532:6;527:3;523:16;519:27;512:38;611:4;604:2;600:7;595:2;587:6;583:15;579:29;574:3;570:39;566:50;559:57;;;199:423;;;;:::o;627:789::-;919:3;908:9;901:22;882:4;946:46;987:3;976:9;972:19;964:6;946:46;:::i;:::-;1028:6;1023:2;1012:9;1008:18;1001:34;1065:1;1057:6;1054:13;1044:144;;1110:10;1105:3;1101:20;1098:1;1091:31;1145:4;1142:1;1135:15;1173:4;1170:1;1163:15;1044:144;1224:6;1219:2;1208:9;1204:18;1197:34;1279:9;1271:6;1267:22;1262:2;1251:9;1247:18;1240:50;1307:33;1333:6;1325;1307:33;:::i;:::-;1299:41;;;1406:1;1402;1397:3;1393:11;1389:19;1381:6;1377:32;1371:3;1360:9;1356:19;1349:61;627:789;;;;;;;;:::o;1421:380::-;1500:1;1496:12;;;;1543;;;1564:61;;1618:4;1610:6;1606:17;1596:27;;1564:61;1671:2;1663:6;1660:14;1640:18;1637:38;1634:161;;1717:10;1712:3;1708:20;1705:1;1698:31;1752:4;1749:1;1742:15;1780:4;1777:1;1770:15;1634:161;;1421:380;;;:::o",
+    "sourcePath": "e:/Blockchain/blockchain_supply_chain/ethereum/contracts/member.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.17+commit.8df45f5f"
+    },
+    "ast": {
+        "absolutePath": "e:/Blockchain/blockchain_supply_chain/ethereum/contracts/member.sol",
+        "exportedSymbols": {
+            "Participant": [
+                476
+            ]
+        },
+        "id": 477,
+        "license": "GPL-3.0",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 444,
+                "literals": [
+                    "solidity",
+                    ">=",
+                    "0.7",
+                    ".0",
+                    "<",
+                    "0.9",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "39:31:2"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "Participant",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "documentation": {
+                    "id": 445,
+                    "nodeType": "StructuredDocumentation",
+                    "src": "74:78:2",
+                    "text": " @title Campaign\n @dev Implements project crowdfunding platform"
+                },
+                "fullyImplemented": true,
+                "id": 476,
+                "linearizedBaseContracts": [
+                    476
+                ],
+                "name": "Participant",
+                "nameLocation": "163:11:2",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 448,
+                        "mutability": "mutable",
+                        "name": "pc",
+                        "nameLocation": "186:2:2",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 476,
+                        "src": "181:9:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 446,
+                            "name": "uint",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "181:4:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "30",
+                            "id": 447,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "189:1:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "canonicalName": "Participant.user_type",
+                        "id": 453,
+                        "members": [
+                            {
+                                "id": 449,
+                                "name": "manufacturer",
+                                "nameLocation": "222:12:2",
+                                "nodeType": "EnumValue",
+                                "src": "222:12:2"
+                            },
+                            {
+                                "id": 450,
+                                "name": "supplier",
+                                "nameLocation": "245:8:2",
+                                "nodeType": "EnumValue",
+                                "src": "245:8:2"
+                            },
+                            {
+                                "id": 451,
+                                "name": "customer",
+                                "nameLocation": "264:8:2",
+                                "nodeType": "EnumValue",
+                                "src": "264:8:2"
+                            },
+                            {
+                                "id": 452,
+                                "name": "retailer",
+                                "nameLocation": "283:8:2",
+                                "nodeType": "EnumValue",
+                                "src": "283:8:2"
+                            }
+                        ],
+                        "name": "user_type",
+                        "nameLocation": "202:9:2",
+                        "nodeType": "EnumDefinition",
+                        "src": "197:101:2"
+                    },
+                    {
+                        "canonicalName": "Participant.participant",
+                        "id": 465,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 455,
+                                "mutability": "mutable",
+                                "name": "username",
+                                "nameLocation": "342:8:2",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 465,
+                                "src": "335:15:2",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 454,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "335:6:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 457,
+                                "mutability": "mutable",
+                                "name": "userId",
+                                "nameLocation": "366:6:2",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 465,
+                                "src": "361:11:2",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 456,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "361:4:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 460,
+                                "mutability": "mutable",
+                                "name": "utype",
+                                "nameLocation": "393:5:2",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 465,
+                                "src": "383:15:2",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_enum$_user_type_$453",
+                                    "typeString": "enum Participant.user_type"
+                                },
+                                "typeName": {
+                                    "id": 459,
+                                    "nodeType": "UserDefinedTypeName",
+                                    "pathNode": {
+                                        "id": 458,
+                                        "name": "user_type",
+                                        "nameLocations": [
+                                            "383:9:2"
+                                        ],
+                                        "nodeType": "IdentifierPath",
+                                        "referencedDeclaration": 453,
+                                        "src": "383:9:2"
+                                    },
+                                    "referencedDeclaration": 453,
+                                    "src": "383:9:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_enum$_user_type_$453",
+                                        "typeString": "enum Participant.user_type"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 462,
+                                "mutability": "mutable",
+                                "name": "location",
+                                "nameLocation": "416:8:2",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 465,
+                                "src": "409:15:2",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 461,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "409:6:2",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 464,
+                                "mutability": "mutable",
+                                "name": "user_address",
+                                "nameLocation": "443:12:2",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 465,
+                                "src": "435:20:2",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                },
+                                "typeName": {
+                                    "id": 463,
+                                    "name": "address",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "435:7:2",
+                                    "stateMutability": "nonpayable",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "participant",
+                        "nameLocation": "313:11:2",
+                        "nodeType": "StructDefinition",
+                        "scope": 476,
+                        "src": "306:157:2",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "35c1d349",
+                        "id": 470,
+                        "mutability": "mutable",
+                        "name": "participants",
+                        "nameLocation": "503:12:2",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 476,
+                        "src": "469:46:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_participant_$465_storage_$",
+                            "typeString": "mapping(uint256 => struct Participant.participant)"
+                        },
+                        "typeName": {
+                            "id": 469,
+                            "keyType": {
+                                "id": 466,
+                                "name": "uint",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "477:4:2",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "469:26:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_participant_$465_storage_$",
+                                "typeString": "mapping(uint256 => struct Participant.participant)"
+                            },
+                            "valueType": {
+                                "id": 468,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 467,
+                                    "name": "participant",
+                                    "nameLocations": [
+                                        "483:11:2"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 465,
+                                    "src": "483:11:2"
+                                },
+                                "referencedDeclaration": 465,
+                                "src": "483:11:2",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_participant_$465_storage_ptr",
+                                    "typeString": "struct Participant.participant"
+                                }
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 475,
+                        "mutability": "mutable",
+                        "name": "participantsId",
+                        "nameLocation": "552:14:2",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 476,
+                        "src": "522:44:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_participant_$465_storage_$",
+                            "typeString": "mapping(address => struct Participant.participant)"
+                        },
+                        "typeName": {
+                            "id": 474,
+                            "keyType": {
+                                "id": 471,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "530:7:2",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "522:29:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_participant_$465_storage_$",
+                                "typeString": "mapping(address => struct Participant.participant)"
+                            },
+                            "valueType": {
+                                "id": 473,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 472,
+                                    "name": "participant",
+                                    "nameLocations": [
+                                        "539:11:2"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 465,
+                                    "src": "539:11:2"
+                                },
+                                "referencedDeclaration": 465,
+                                "src": "539:11:2",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_participant_$465_storage_ptr",
+                                    "typeString": "struct Participant.participant"
+                                }
+                            }
+                        },
+                        "visibility": "internal"
+                    }
+                ],
+                "scope": 477,
+                "src": "154:416:2",
+                "usedErrors": []
+            }
+        ],
+        "src": "39:531:2"
+    },
+    "functionHashes": {
+        "participants(uint256)": "35c1d349"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "148200",
+            "executionCost": "5202",
+            "totalCost": "153402"
+        },
+        "external": {
+            "participants(uint256)": "infinite"
+        }
+    }
+}

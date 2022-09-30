@@ -7,7 +7,7 @@ pragma solidity >=0.7.0 <0.9.0;
  * @dev Implements project crowdfunding platform
  */
 contract Item{
-   uint ic=0;
+   uint public ic=0;
 //    enum state{
 //        starting,
 //        Ordered,
@@ -21,10 +21,12 @@ contract Item{
        uint productId;
        address itemOwner;
        string current_location;
-       mapping(uint =>address) order_history;
+       address[] order_history;
        uint norders;
        uint cost;
        
    }
    mapping(uint=>item) public Items;
+
+
 }

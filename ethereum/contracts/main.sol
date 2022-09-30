@@ -81,18 +81,17 @@ contract Supplychain is  Modifier{
         // newItem.productState = state.manufacturer;
         // newItem.current_location = msg.sender.location;
         newItem.norders=0;
-        newItem.order_history[newItem.norders]=msg.sender;
+        newItem.order_history.push(msg.sender);
         // Items[ic]=newItem;
         emit itemcreated(ic ,msg.sender);
         ic=ic+1;
-
     }
     // change krna hain isko
  
     function moveProduct(uint _id) public {
         Items[_id].norders++;
         Items[_id].itemOwner = msg.sender;
-        Items[_id].order_history[Items[_id].norders] = msg.sender ;
+        Items[_id].order_history.push(msg.sender);
     }
     
     function personDetail(uint _id) public view returns(participant memory)
@@ -100,8 +99,9 @@ contract Supplychain is  Modifier{
         return participants[_id];
     }
     
-    
-
+    function getOrderHistory(uint _id)public view returns(address [] memory){
+        return Items[_id].order_history;
+    }
     // function productDetail(uint _id) public view returns (item memory)
     // {
     //     return Items[_id];
