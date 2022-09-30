@@ -62,7 +62,7 @@ const ItemModel = ({address, index}) => {
         <Modal
             closeIcon
             open={open}
-            trigger={<Button>Order Details</Button>}
+            trigger={<Button>Order Deta</Button>}
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             size='tiny'
@@ -72,6 +72,10 @@ const ItemModel = ({address, index}) => {
                 <p>
                     <b>Item Owner: </b>
                     {address.itemOwner}
+                </p>
+                <p>
+                    <b>Cost: </b>
+                    {address.cost}
                 </p>
                 <u><h4>Orders History</h4></u>
                 {handleOrderHistory()}
