@@ -19,7 +19,7 @@
 .DS_Store
 *.pem
 /.idea
-/config.json
+# /config.json
 
 # debug
 npm-debug.log*
